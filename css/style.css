@@ -1,0 +1,254 @@
+html {
+    font-family: Neuzeit Grotesk;
+    color: #3c3c3b;
+}
+
+body {
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0px;
+    background-color: #EDEDED;
+    width: 1240px;
+    height: 55px;
+    z-index: 2;
+    border-radius: 0 0 33px 33px;
+    margin: 0 63px;
+    padding-top: 14px;
+    z-index: 2;
+}
+
+#logoheader {
+    height: 38px;
+    width: auto;
+    margin: 0 0 16px 41px;
+    float: left;
+}
+
+nav li:first-child {
+    margin-left: 117px;
+}
+
+nav {
+    display: inline;
+    position: relative;
+    float: left;
+}
+
+nav li {
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    width: 165px;
+    margin: 10px 0 0 32px;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #FF911F;
+}
+
+nav li a:hover {
+    color: #3c3c3b;
+}
+
+
+/* gradient */
+
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    z-index: 3;
+}
+
+#logo {
+    display: block;
+    width: 822px;
+    margin: 0 auto 17px;
+}
+
+
+/* main */
+
+h2 {
+    font: normal normal 500 60px/72px interstate;
+    margin-bottom: 23px;
+}
+
+h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: #FF911F;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+    padding-top: 40px;
+}
+h4{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: #F9B233;
+    font-size: 18px;
+}
+
+p {
+    font-size: 36px;
+}
+
+button {
+    width: 280px;
+    height: 58px;
+    background-color: #FF911F;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    font: normal normal 400 22px/27px Neuzeit Grotesk;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+/* wie */
+
+#wie {
+    position: relative;
+    max-width: 654px;
+    margin: 0 auto 175px;
+    text-align: center;
+    color: #3C3C3B;
+}
+
+#wie a {
+    color: #3c3c3b;
+}
+
+#wie a:hover {
+    color: #FF911F;
+}
+
+
+/* workshops */
+
+#workshops {
+    width: 1082px;
+    margin: 0 auto 278px;
+}
+
+#workshops h2 {
+    margin-bottom: 32px
+}
+
+.box {
+    border-radius: 10px;
+    float: left;
+}
+
+.lightorange {
+    position: relative;
+    background-color: #F9B233;
+    width: 260px;
+    height: 319px;
+}
+
+.lightorange:first-child {
+    margin-left: 37px;
+}
+
+.darkorange {
+    position: relative;
+    background-color: #FF911F;
+    width: 296px;
+    height: 350px;
+    margin: 0 96px;
+}
+
+.darkorange .grey {
+    margin: 0 18px;
+}
+
+.grey {
+    background-color: #EDEDED;
+    width: 260px;
+    height: 400px;
+    top: 60px;
+    position: relative;
+}
+
+.displays .lightorange:first-child .grey {
+    right: 37px;
+}
+
+.displays .lightorange:last-of-type .grey {
+    left: 37px;
+}
+
+
+/* interesse? */
+
+#interesse {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ons team */
+
+#team {
+    width: 720px;
+    height: 1108px;
+    margin: 227px 507px 200px 139px;
+    background-color: #EDEDED;
+}
+
+.people {
+    position: relative;
+    width: 536px;
+    height: 160px;
+    background-color: #ffffff;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.teamtext {
+    position: relative;
+    float: left;
+    padding-left: 40px;
+}
+.teamtext p {
+    font-size: 22px;
+    color: #3C3C3B;
+    padding-top: 25px;
+}
+
+#team h2 {
+    /*top: -43px;*/
+}
+
+.heads {
+    float: left;
+    width: 159px;
+}
+#contact {
+    float: right;
+    padding-left: 388px;
+    font-size: 22px;
+}
+
+footer {
+    height: 443px;
+    background-color: #EDEDED;
+}
