@@ -504,6 +504,8 @@ footer {
 footer h4 {
     color: #FF911F;
     text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 23px;
 }
 
 footer div.centre {
