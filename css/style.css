@@ -3,8 +3,13 @@ html {
     color: #3c3c3b;
 }
 
+html a{
+    text-decoration: none;
+}
+
 main {
-    width: 1366px;
+    position: relative;
+    max-width: 1366px;
     margin: 0 auto;
 }
 
@@ -58,7 +63,6 @@ nav li {
 }
 
 nav li a {
-    text-decoration: none;
     color: #FF911F;
 }
 
@@ -67,8 +71,7 @@ nav li a:hover {
 }
 
 
-/* gradient */
-
+/* front images / gradients / etc */
 .gradient {
     position: absolute;
     width: 100%;
@@ -83,27 +86,53 @@ nav li a:hover {
     margin: 0 auto 17px;
 }
 
+div.scroll {
+    position: absolute;
+    top: 500px;
+    right: 0;
+    margin-right: 5px;
+    transform: matrix(0, 1, -1, 0, 0, 0);
+    height: 25px;
+    width: auto;
+}
 
-/* main */
+div.scroll img {
+    width: 25px;
+    height: auto;
+    transform: matrix(0, -1, 1, 0, 0, 0);
+    float: left;
+}
 
+div.scroll p{
+    float: left;
+    text-align: center;
+    font: normal normal normal 22px Neuzeit Grotesk;
+    letter-spacing: 1.1px;
+    color: #FF911F;
+    margin-right: 35px;
+}
+
+/* algemeen */
 h2 {
     font: normal normal 500 60px/72px interstate;
     margin-bottom: 23px;
 }
 
 h3 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    color: #FF911F;
-    font-size: 24px;
-    letter-spacing: 1.2px;
-    padding-top: 40px;
+    font: normal normal bold 45px/55px interstate;
+    letter-spacing: 2.25px;
 }
-h4{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    color: #F9B233;
-    font-size: 18px;
+
+h4 {
+    font: normal normal 500 30px/36px Interstate;
+    letter-spacing: 1.5px;
+}
+
+h5 {
+    font: normal normal bold 24px/29px interstate;
+    color: #FF911F;
+    letter-spacing: 1.2px;
+    margin-top: 40px;
 }
 
 p {
@@ -116,7 +145,7 @@ section {
 
 button {
     width: 280px;
-    height: 58px;
+    height: 50px;
     background-color: #FF911F;
     border-radius: 10px;
     border: none;
@@ -124,10 +153,11 @@ button {
     font: normal normal 400 22px/27px Neuzeit Grotesk;
     letter-spacing: 1.1px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
+/* inhoud index */
 /* wie */
-
 #wie {
     position: relative;
     max-width: 654px;
@@ -137,6 +167,7 @@ button {
 }
 
 #wie a {
+    text-decoration: underline;
     color: #3c3c3b;
 }
 
@@ -146,19 +177,19 @@ button {
 
 
 /* workshops */
-
 #workshops {
     width: 1082px;
     margin: 0 auto;
 }
 
-#workshops h2 {
-    margin-bottom: 32px
+#workshops a {
+    color: #3c3c3b;
 }
 
 .box {
     border-radius: 10px;
     float: left;
+    cursor: pointer;
 }
 
 .lightorange {
@@ -172,9 +203,7 @@ button {
     margin-left: 37px;
 }
 
-.lightorange p, .darkorange p {
-    font: normal normal 500 30px/36px Interstate;
-    letter-spacing: 1.5px;
+.nameworkshop {
     margin-top: 14px;
     text-align: center;
 }
@@ -199,52 +228,201 @@ button {
     position: relative;
 }
 
-.displays .lightorange:first-child .grey {
-    right: 37px;
+.box.grey p.attention {
+    color: #F9B233;
+    font: normal normal normal 16px/19px Neuzeit Grotesk;
+    letter-spacing: 0.8px;
+    float: right;
+    margin: 11px 15px 24px 0;
 }
 
-.displays .lightorange:last-child .grey {
-    left: 37px;
+p.attention.dark {
+    color: #FF911F;
 }
+
+.stats p {
+    font: normal normal normal 14px Neuzeit Grotesk;
+    letter-spacing: 0.7px;
+    float: left;
+    margin-left: 50px;
+    text-align: center;
+}
+
+p.beschrijving {
+    font: normal normal normal 18px/22px Neuzeit Grotesk;
+    letter-spacing: 0.9px;
+    text-align: center;
+    position: absolute;
+}
+
+div.overlay {
+    background-size: cover;
+    margin: 24px auto 0;
+}
+
 
 #workshops button {
     display: block;
     margin: 0 auto;
     margin-top: 160px;
+    z-index: 2;
 }
 
-/* graphics */
-
-img.middle.graphics {
-    position: relative;
-    bottom: 58px;
+/* robot */
+.robot .grey, #interesse .left .grey {
+    right: 37px;
 }
 
-img.bottom.graphics {
-    position: relative;
-    left: 0; 
-    bottom: 1300px;
-    z-index: -1;
+.robot .stats p:first-child {
+    margin-left: 5px;
+}
+
+.robot div.overlay {
+    background-image: 
+        linear-gradient(#ededed00,#EDEDED40, #EDEDEDe6, #EDEDED),
+        url("../assets/robot.svg");
+    width: 150px;
+    height: 209px;
+}
+
+.robot p.beschrijving {
+    bottom: 50px;
+}
+
+/* hackathon */
+.hackathon .stats p:first-child {
+    margin-left: 31px;
+}
+
+.hackathon div.overlay {
+    background-image: 
+        linear-gradient(#ededed00,#EDEDED40, #EDEDEDe6, #EDEDED),
+        url("../assets/agenten.svg");
+    width: 150px;
+    height: 210px;
+}
+
+.hackathon p.beschrijving {
+    bottom: 24px;
+}
+
+/* play with light */
+.light .grey, #interesse .right .grey{
+    left: 37px;
+}
+
+.light .stats {
+    margin: 53px 0 24px;
+}
+
+.light .stats p:first-child {
+    margin-left: 18px;
+}
+
+.light div.overlay {
+    background-image: 
+    linear-gradient(#ededed00,#EDEDED40, #EDEDEDe6, #EDEDED),
+    url("../assets/gotchi.svg");
+    width: 150px;
+    height: 134px;
+    margin-top: 56px;
+}
+
+.light p.beschrijving {
+    bottom: 31px;
 }
 
 
 /* interesse? */
-
 #interesse {
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
     position: relative;
     bottom: 185px;
+    width: 1088px;
+    margin: 0 auto ; 
 }
+
+#interesse h2{
+    margin: 0 auto 23.5px;
+    text-align: center;
+}
+
+#interesse h3 {
+    margin-top: 48px;
+    color: #F9B233;
+    text-align: center;
+}
+
+#interesse .displays {
+    margin-bottom: 32px;
+}
+
+#interesse .grey {
+    height: 319px;
+    top: 32px;
+}
+
+#interesse .lightorange {
+    position: relative;
+    top: 32px;
+}
+
+#interesse .displays h3 span {
+    font: normal normal normal 20px/24px interstate;
+    letter-spacing: 1px;
+    color: #3C3C3B;
+    margin-left: 7px;
+}
+
+#interesse p {
+    width: 600px;
+    text-align: center;
+    margin: 23px auto 100px;
+}
+
+#interesse #focus {
+    width: 231px;
+    font: normal normal bold 27px interstate;
+    letter-spacing: 1.35px;
+    margin: 15px auto 16px;
+}
+
+#interesse .displays p {
+    font: normal normal normal 22px/27px Neuzeit Grotesk;
+    letter-spacing: 1.1px;
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+/* first/left */
+#interesse .lightorange:first-child .box h3 {
+    margin-top: 20px;
+}
+
+/* middle */
+#interesse .darkorange .grey{
+    position: relative;
+    top: 0;
+}
+
+#interesse .darkorange h3 {
+    color: #FF911F;
+}
+
+#interesse .displays .darkorange p,  #interesse .displays .grey:last-of-type p {
+    margin-top: 57px;
+}
+
+/* last/right */
+
+
 
 
 /* ons team */
-
 #team {
     width: 720px;
     height: 1108px;
-    margin: 227px 507px 200px 139px;
+    margin: 0 507px 200px 139px;
     background-color: #EDEDED;
 }
 
@@ -264,10 +442,16 @@ img.bottom.graphics {
     padding-left: 40px;
 }
 
+#team .people span{
+    font: normal normal bold 20px interstate;
+    margin-top: 2px;
+    color: #F9B233;
+}
+
 .teamtext p {
     font-size: 22px;
     color: #3C3C3B;
-    padding-top: 25px;
+    margin-bottom: 16px;
 }
 
 #team h2 {
@@ -280,14 +464,150 @@ img.bottom.graphics {
     float: left;
     width: 159px;
 }
+
 #contact {
-    float: right;
-    padding-left: 388px;
-    font-size: 22px;
+    margin-left: 390px;
 }
+
+#contact p {
+    font: normal normal normal 22px/26px Neuzeit Grotesk;
+    margin-bottom: 13px;
+}
+
+/* graphics achtergrond */
+
+.graphics {
+    max-width: 100%;
+    height: auto;
+}
+
+img.middle.graphics {
+    position: relative;
+    bottom: 58px;
+    z-index: -1;
+}
+
+img.bottom.graphics {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* footer */
 
 footer {
     height: 443px;
     width: 100%;
     background-color: #EDEDED;
+}
+
+footer h4 {
+    color: #FF911F;
+    text-transform: uppercase;
+}
+
+footer div.centre {
+    max-width: 988px;
+    height: auto;
+    margin: 0 auto;
+}
+
+footer div.centre div {
+    float: left;
+    width: 160px;
+    margin: 46px 116px 0 0;
+}
+
+footer div.centre div.contact {
+    margin-right: 0;
+}
+
+footer p {
+    text-align: left;
+    font: normal normal normal 14px/33px Neuzeit Grotesk;
+    letter-spacing: 0.7px;
+}
+
+
+/* login pagina */
+
+#imgbackground {
+    width: auto;
+    height: 100vh;
+    right: 255px;
+}
+
+.container {
+    position: absolute;
+    top: 130px;
+    right: 63px;
+    background-color: #ffffff;
+    width: 700px;
+    height: 550px;
+}
+
+.container h2 {
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: 35px;
+    margin-top: 87px;
+}
+
+.container p {
+    float: left;
+    text-align: center;
+    width: 160px;
+    font-size: 30px;
+    margin: 30px;
+    margin-bottom: 0px;
+    color: #3C3C3B;
+}
+
+.container #active{
+    font-weight: bold;
+    text-decoration: underline;     
+    text-decoration-color: #FF911F;
+}
+
+.input {
+    position: relative;
+    border: none;
+    float: right;
+    width: 300px;
+    height: 30px;
+    right: 22px;
+}
+
+.container button {
+    position: relative;
+    margin: 20px;
+    top: 87px;
+    left: 380px;
+}
+
+.fields .invulveld {
+    width: 500px;
+    height: 36px;
+    background-color: #EDEDED;
+    padding: 14px 0px 0px 22px;
+    margin: 30px 0px 0px 35px;
+    font-size: 20px;
+    color: #FF911F;
+    font-weight: bold;
+    align-items: right;
+}
+#registreren {
+    position: relative;
+    float: right;
+}
+
+/* registreren */
+.container .registreer h2 {
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: 35px;
+    margin-top: 0px;
+}
+.fields .registreer {
+    margin-top: 16px;
 }
