@@ -14,12 +14,12 @@
 <body>
     <div class="gradient"></div>
     <header>
-        <img src="assets/logo.svg" alt="logo Javasy" id="logoheader">
+        <a href="/index.html"><img src="assets/logo.svg" alt="logo Javasy" id="logoheader"></a>
         <nav>
             <li><a href="#workshops">workshops</a></li>
             <li><a href="#team">over ons</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="">inloggen</a></li>
+            <li><a href="#bottom">contact</a></li>
+            <li><a href="/login.html">inloggen</a></li>
         </nav>
         <div class="clear"></div>
     </header>
@@ -27,7 +27,11 @@
     <main>
         <!-- javasy logo en confetti etc -->
         <img id="logo" src="assets/hero-titel.svg">
-
+        <div class="scroll">
+            <p>Scroll voor meer!</p>
+            <img src="assets/pijltje.svg" alt="pijl">
+        </div>
+        <div class="clear"></div>
         <!-- inhoud -->
         <section id="wie">
             <h2>Wie?</h2>
@@ -37,33 +41,86 @@
         <section id="workshops">
             <h2>Workshops</h2>
             <div class="displays">
-                <div class="box lightorange">
-                    <div class="box grey">
-
+                <a href="workshop.html">
+                    <div class="box lightorange robot">
+                        <h4 class="nameworkshop ">R0-B0t</h4>
+                        <div class="box grey">
+                            <p class="attention">Korting 15%</p>
+                            <div class="clear"></div>
+                            <div class="stats">
+                                <p>12+ jr</p>
+                                <p>2,5 uur</p>
+                                <p>processing</p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="overlay"></div>
+                            <p class="beschrijving">Ontwerp, maak en programmeer in deze workshop je eigen robot!</p>
+                        </div>
+                   </div>
+                </a>
+                <a href="workshop.html">
+                    <div class="box darkorange hackathon">
+                        <h4 class="nameworkshop ">Hackathon</h4>
+                        <div class="box grey">
+                            <p class="attention dark">New!</p>
+                            <div class="clear"></div>
+                            <div class="stats">
+                                <p>10+ jr</p>
+                                <p>2 uur</p>
+                                <p>p5.js</p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="overlay"></div>
+                            <p class="beschrijving">Help de geheim agent de hackers van de dag te verslaan en leer te programmeren</p>
+                        </div>
                     </div>
-                </div>
-                <div class="box darkorange">
-                    <div class="box grey">
-
+                </a>
+                <a href="workshop.html">
+                    <div class="box lightorange light">
+                        <h4 class="nameworkshop ">Play with light</h4>
+                        <div class="box grey">
+                            <div class="stats">
+                                <p>10+ jr</p>
+                                <p>4 uur</p>
+                                <p>micro:bit</p>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="overlay"></div>
+                            <p class="beschrijving">In deze serie ga je een digitaal huisdier, games en wearables uitvinden en maken met de Microbit.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="box lightorange">
-                    <div class="box grey">
-
-                    </div>
-                </div>
-
-                <div class="clear"></div>
+                    <div class="clear"></div>
+                </a>
             </div>
-
-            <button>Naar workshops</button>
+            
+            <a href="/workshop.html"><button>Naar workshops</button></a>
+            
         </section>
-
+        <img class="middle graphics" src="assets/middle graphics.svg" alt="">
         <section id="interesse">
             <h2>Interesse?</h2>
             <p>Meld je nu aan voor een gratis proefles of neem direct een van onze abonnementen voor onbeperkte toegang tot onze workshops.</p>
             <div class="displays">
-
+                <div class="box lightorange left">
+                    <div class="box grey">
+                        <h3>Gratis Proefles</h3>
+                        <p>Maak een account aan en geniet van een gratis proefles</p>
+                    </div>
+                </div>
+                <div class="box darkorange">
+                    <p id="focus">Meest gekozen</p>
+                    <div class="box grey">
+                        <h3>€9,99<span>p/m</span></h3>
+                        <p>Neem een abonnement van 12 maanden!</p>
+                    </div>
+                </div>
+                <div class="box lightorange right">
+                    <div class="box grey">
+                        <h3>€14,99<span>p/m</span></h3>
+                        <p>Neem een abonnement van 3 maanden!</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
             </div>
         </section>
 
@@ -72,8 +129,8 @@
             <div class="people">
                 <img class="heads" src="assets/albert@2x.png">
                 <div class="teamtext">
-                    <h3>Albert</h3>
-                    <h4>Graphic Designer</h4>
+                    <h5>Albert</h5>
+                    <p><span>Graphic Designer</span></p>
                     <p>Maakt lekkere nasi</p>
                 </div>
                 <div class="clear"></div>
@@ -81,8 +138,8 @@
             <div class="people">
                 <img class="heads" src="assets/lanka@2x.png">
                 <div class="teamtext">
-                    <h3>Lanka</h3>
-                    <h4>Developer</h4>
+                    <h5>Lanka</h5>
+                    <p><span>Developer</span></p>
                     <p>Vindt badeendjes leuk</p>
                 </div>
                 <div class="clear"></div>
@@ -90,8 +147,8 @@
             <div class="people">
                 <img class="heads" src="assets/chayenne@2x.png">
                 <div class="teamtext">
-                    <h3>Chayenne</h3>
-                    <h4>Photographer</h4>
+                    <h5>Chayenne</h5>
+                    <p><span>Photographer</span></p>
                     <p>Houdt van bier</p>
                 </div>
                 <div class="clear"></div>
@@ -99,23 +156,44 @@
             <div class="people">
                 <img class="heads" src="assets/jessica@2x.png">
                 <div class="teamtext">
-                    <h3>Jessica</h3>
-                    <h4>Developer</h4>
+                    <h5>Jessica</h5>
+                    <p><span>Developer</span></p>
                     <p>Speelt ukelele</p>
                 </div>
                 <div class="clear"></div>
             </div>
             <div id="contact">
-                Vragen?
-                <button>mail ons</button>
+                <p>Vragen?</p>
+                <a href="#"><button>mail ons</button></a>
             </div>
         </section>
+
+        <img src="assets/bottom graphics.svg" alt="" class="bottom graphics">
 
     </main>
 
 
     <footer>
-
+        <div class="centre">
+            <div class="javasy">
+                <h4>javasy</h4>
+                <p>Over ons<br>Nieuws<br>Carrière<br>Press<br>Partners</p>
+            </div>
+            <div class="socials">
+                <h4>socials</h4>
+                <p>Facebook <br>Instagram<br>Twitter<br>LinkedIn</p>
+            </div>
+            <div class="help">
+                <h4>help</h4>
+                <p>FAQ<br>Klantenservice<br>Voorwaarden & privacy<br>Cookie-instellingen<br>Mijn account</p>
+            </div>
+            <div class="contact">
+                <h4>contact</h4>
+                <p>Locatie:<br>Brusselseweg 150, <br>6217 HB Maastricht <br>Mail:<br> contact@javasy.com<br>Phone:<br>06-64839271</p>
+                
+            </div>
+            <div class="clear"></div>
+        </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
