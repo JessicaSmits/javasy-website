@@ -4,9 +4,222 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/unp7hxx.css">
+    <title>Hackathon</title>
 </head>
 <body>
+    <header id="workshop">
+        <a href="index.html"><img src="assets/logo.svg" alt="logo Javasy" id="logoheader"></a>
+        <nav>
+            <li><a href="#workshops">workshops</a></li>
+            <li><a href="#team">over ons</a></li>
+            <li><a href="#bottom">contact</a></li>
+            <li><a href="login.html">inloggen</a></li>
+        </nav>
+        <div class="clear"></div>
+    </header>
+
+    <div id="promo" style="padding:56.25% 0 0 0;position:relative;">
+        <iframe src="https://player.vimeo.com/video/563621712?autoplay=1&badge=0&muted=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay=1; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Tutorial p5js editor"></iframe>
+    </div>
     
+    <main>
+        <section id="about">
+            <div class="bigbox first">
+                <div class="box omschrijving">
+                    <div class="inhoud">
+                        <h3>Omschrijving</h3>
+                        <p>In deze Hackathon leren leerlingen op een speelse manier de basis van coderen binnen p5. De workshop is voor kinderen vanaf 10 jaar en duurt 2 uur.</p>
+                    </div>
+                </div>
+                <img src="assets/schattigejongen.jpg" alt="cute kid" class="box">
+                <div class="clear"></div>
+            </div>
+            <div class="bigbox second">
+                <img src="assets/lachendemeiden.jpg" alt="lauging girls" class="box">
+                <div class="box thema">
+                    <div class="inhoud">
+                            <h3>Thema</h3>
+                            <p>Geheim 404 gaat op missie om de hackers te verslaan, maar heeft daarbij hulp nodig. Ze nodigt de kinderen uit om mee te gaan op avontuur en motiveert ze om ook geheim agent te worden.</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>            
+            <div class="bigbox third">
+                <div class="box vaardigheden">
+                    <div class="inhoud">
+                        <h3>Vaardigheden</h3>
+                        <p>De leerlingen hebben geen voorkennis nodig om met de workshop aan de slag te kunnen gaan. Alle nodige kennis wordt stapsgewijs binnen de cursus uitgelegd.</p>
+                    </div>
+                </div>
+                <img src="assets/albertmetkids.jpg" alt="teaching kids" class="box">
+                <div class="clear"></div>
+            </div>            
+        </section>
+
+        <section class="overgang">
+            <img class="middle graphics" src="assets/middle graphics.svg" alt="">
+            <div class="workshopinfo">
+                <h2>De workshop</h2>
+                <p>Hieronder staan de tutorials en materialen die je nodig hebt voor het geven van de workshop.</p>
+            </div>
+        </section>
+
+        <section class="tutorials">
+            <h2>Tutorials</h2>
+            <div id="accordion">
+
+                <h3>Vlaggetjes maken</h3>
+                <div>
+                    <p>In deze tutorial laat Lanka zien hoe je de vlaggetjes maakt die gebruikt worden in de grote hack quiz. Maak ze zelf of laat de hele klas meedoen!</p>
+
+                    <div class="video" style="padding:75% 0 0 0;position:relative;border-radius: 30px; ">
+                        <iframe src="https://player.vimeo.com/video/563695454?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="vlaggetjes maken - tutorial.mp4"></iframe>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <h3>Web-editor</h3>
+                <div>
+                    <p>In deze tutorial legt Jessica de basis uit van de p5.js editor. Je leert hoe je een account moet aanmaken en hierin kunt navigeren.</p>
+                    <div class="video" style="padding:56.25% 0 0 0;position:relative;border-radius: 30px;">
+                        <iframe src="https://player.vimeo.com/video/563621712?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay=1; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Tutorial p5js editor"></iframe>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <h3>Vormen</h3>
+                <div> 
+                    <p>In deze tutorial laat Albert zien welke vormen we kennen binnen p5.js en hoe je deze zelf kunt maken. De begrippen zijn in het Engels, maar worden gewoon Nederlands uitgelegd.</p>
+                    <!-- hier video -->
+                    <div class="clear"></div>
+                </div>
+
+                <h3>Kleuren</h3>
+                <div>
+                    <p>In deze tutorial laat Chayenne zien hoe je jouw vormen kleuren kunt geven en er een rand omheen kunt zitten. We werken met hex-codes, kijk naar de video om hier meer over te leren.</p>
+                    <!-- hier video -->
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="bestanden-graphics">
+            <img src="assets/bottom graphics.svg" alt="een leuk achtergrond-patroon" class="bestanden graphics">
+        </div>
+    
+        <section id="bestanden">
+            <h2>Bestanden</h2>
+            <div class="files">
+                <div class="downloadbox">
+                    <h5>Begrippenlijst</h5>
+                    <p><span>Voor de leraar</span></p>
+                    <p>Een overzicht van alle nodige begrippen</p>
+                </div>
+                <a href="downloads/test.jpg" download="Begrippenlijst Hackathon">
+                    <img class="downloadsvg" src="assets/download.svg"></a>
+                <div class="clear"></div>
+            </div>
+            <div class="files">
+                <div class="downloadbox">
+                    <h5>Opzoekblad</h5>
+                    <p><span>Voor de leerling</span></p>
+                    <p>Samenvatting van alles wat de leerling moet weten</p>
+                </div>
+                <a href="downloads/opzoek-blaadje.docx" download="Opzoekblad Hackathon">
+                    <img class="downloadsvg" src="assets/download.svg"></a>
+                <div class="clear"></div>
+            </div>
+            <div class="files">
+                <div class="downloadbox">
+                    <h5>Werkboekje</h5>
+                    <p><span>Voor de leerling</span></p>
+                    <p>Opdrachten voor bij de theorie</p>
+                </div>
+                <a href="downloads/werkboekje.pdf" download="Werkboekje Hackathon">
+                    <img class="downloadsvg" src="assets/download.svg"></a>
+                <div class="clear"></div>
+            </div>
+            <div class="files">
+                <div class="downloadbox">
+                    <h5>Badge</h5>
+                    <p><span>Voor de leerling</span></p>
+                    <p>Een belonging voor het afronden van de workshop</p>
+                </div>
+                <a href="downloads/badges.pdf" download="Badge Hackathon">
+                    <img class="downloadsvg" src="assets/download.svg"></a>
+                <div class="clear"></div>
+            </div>
+            <div id="contact">
+                <a href="downloads/files.zip" download="Files Hackathon">
+                    <button id="filesbtn">download alles</button>
+                </a>
+            </div>
+        </section>
+
+        <section id="reviews"> 
+            <div id="reviewbackground">
+                <h2>Reviews</h2>
+            </div>
+
+            <div class="beoordeling top">
+                    <p class="reviewtitle">"Top!"</p>
+                    <img class="stars" src="assets/stars.svg">
+                    <img class="reviewpicture" src="assets/rev1.png"> 
+                    <p class="description">Leuke en goed verzorgde workshop. Uitleg was top en de leerlingen waren heel erg enthousiast!</p>
+                    <p class="reviewperson">Roel Dullens, docent groep 7</p>  
+            </div>
+
+            <div class="beoordeling leuk">
+                <p class="reviewtitle">"Leuk!"</p>
+                <img class="stars" src="assets/stars.svg">
+                <img class="reviewpicture" src="assets/rev2.png">
+                <p class="description">De kinderen wilden blijven doorgaan terwijl de schooldag voorbij was. Zo leuk vonden ze het!</p>
+                <p class="reviewperson">Dirk de Hond, docent groep 7</p>
+            </div>
+
+            <div class="beoordeling cool">
+                <p class="reviewtitle">"Cool!"</p>
+                <img class="stars" src="assets/stars.svg">        
+                <img class="reviewpicture" src="assets/rev3.png">        
+                <p class="description">Het thema met de geheimagent maakt dit een coole manier voor de jeugd om te coderen.</p>
+                <p class="reviewperson">Els de Vries, docent groep 7</p>
+            </div>
+
+            <a href="#"><p>Meer reviews ></p></a>
+            <div class="clear"></div>
+        </section>
+
+    </main>
+
+    <footer id="bottom">
+        <div class="centre">
+            <div class="javasy">
+                <h4>javasy</h4>
+                <p>Over ons<br>Nieuws<br>Carrière<br>Press<br>Partners</p>
+            </div>
+            <div class="socials">
+                <h4>socials</h4>
+                <p>Facebook <br>Instagram<br>Twitter<br>LinkedIn</p>
+            </div>
+            <div class="help">
+                <h4>help</h4>
+                <p>FAQ<br>Klantenservice<br>Voorwaarden & privacy<br>Cookie-instellingen<br>Mijn account</p>
+            </div>
+            <div class="contact">
+                <h4>contact</h4>
+                <p>Locatie:<br>Brusselseweg 150, <br>6217 HB Maastricht <br>Mail:<br> contact@javasy.com<br>Phone:<br>06-64839271</p>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </footer>
+
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
