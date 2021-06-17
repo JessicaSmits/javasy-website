@@ -44,6 +44,22 @@ header {
     top: 0;
     left: 0;
     display: none;
+    z-index: 3;
+    transition: all 0.2s;
+    /* voor het geval iemand de site op de desktop bekijkt*/
+    cursor: pointer;
+}
+
+.darkoverlay {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgb(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    transition: all 0.2s;
 }
 
 #logoheader {
@@ -61,6 +77,7 @@ nav {
     display: inline;
     position: relative;
     float: left;
+    z-index: 2;
 }
 
 nav li {
@@ -90,8 +107,9 @@ nav li a:hover {
 }
 
 #logo {
+    font-family: "interstate";
     display: block;
-    max-width: 822px;
+    max-width: 825px;
     height: auto;
     margin: 0 auto 17px;
 }
@@ -281,7 +299,7 @@ div.overlay {
 #workshops button {
     display: block;
     margin: 0 auto;
-    margin-top: 23px;
+    margin-top: 40px;
     z-index: 2;
 }
 
@@ -468,16 +486,17 @@ div.overlay {
 /* ons team */
 #team {
     width: 720px;
-    height: 1108px;
+    height: max-content;
     float: left;
     margin-left: 139px;
+    padding-bottom: 50px;
     background-color: #EDEDED;
 }
 
 .people {
     position: relative;
     max-width: 536px;
-    height: 160px;
+    height: max-content;
     background-color: #ffffff;
     margin: 20px auto;
     border-radius: 10px;
@@ -510,7 +529,7 @@ div.overlay {
 
 .heads {
     float: left;
-    width: 159px;
+    max-width: 159px;
 }
 
 #contact {
@@ -536,7 +555,7 @@ img#mid-graphics {
     z-index: -1;
 }
 
-img#bottom-graphics {
+img.bottom {
     width: auto;
     max-width: none;
     height: auto;
@@ -546,13 +565,18 @@ img#bottom-graphics {
     z-index: -1;
 }
 
+img#bottom-graphics2 {
+    display: none;
+}
+
 /* footer */
 
 footer {
-    height: 443px;
+    height: fit-content;
     width: 100%;
     background-color: #EDEDED;
     margin-top: 200px;
+    padding: 45px 20px 10px;
 }
 
 footer p {
@@ -569,7 +593,7 @@ footer h4 {
 }
 
 footer div.centre {
-    max-width: fit-content;
+    width: fit-content;
     height: auto;
     margin: 0 auto;
 }
@@ -577,7 +601,8 @@ footer div.centre {
 footer div.centre div {
     float: left;
     width: 160px;
-    margin: 46px 116px 0 0;
+    margin-right: 116px;
+    margin-bottom: 20px;
 }
 
 footer div.centre div.contact {
@@ -587,16 +612,18 @@ footer div.centre div.contact {
 
 /* login + registreer pagina */
 
-#imgbackground {
+.imgbackground {
+    position: absolute;
     width: auto;
     height: 100vh;
-    right: 255px;
+    right: 280px;
 }
 
 .container {
+    padding-bottom: 20px;
     position: absolute;
     top: 130px;
-    left: 40vw;
+    right: 5%;
     background-color: #ffffff;
     width: 700px;
     height: 550px;
@@ -628,24 +655,22 @@ footer div.centre div.contact {
     position: relative;
     border: none;
     float: right;
-    width: 320px;
+    width: 420px;
     height: 40px;
     top: -10px;
     right: 4px;
 }
 
-.container button {
-    position: absolute;
-    margin: 20px;
-    bottom: 0px;
-    left: 380px;
+.container a:last-of-type {
+    float: right;
+    margin-top: 96px;
 }
 
 .fields .invulveld {
-    width: 500px;
+    width: 600px;
     height: 36px;
     background-color: #EDEDED;
-    padding: 14px 0px 0px 22px;
+    padding: 13px 0px 0px 22px;
     margin: 16px 0px 0px 35px;
     font-size: 20px;
     color: #FF911F;
@@ -658,11 +683,6 @@ footer div.centre div.contact {
     margin-top: 87px;
 }
 
-#inlogbtn {
-    bottom: 20px;
-}
-
-
 /* registreren */
 .container .registreer h2 {
     position: relative;
@@ -673,6 +693,10 @@ footer div.centre div.contact {
 #registreren {
     position: relative;
     float: right;
+}
+
+a#regibtn {
+    margin-top: 40px;
 }
 
 .registreer {
@@ -1006,6 +1030,10 @@ h3.ui-accordion-header:first-child {
         right: -40px;
     }
 
+    #logo {
+        width: 80vw;
+    }
+
     nav li {
         margin-left: 20px;
         width: 140px;
@@ -1017,6 +1045,10 @@ h3.ui-accordion-header:first-child {
 
     footer div.centre div {
         margin-right: 75px;
+    }
+
+    .imgbackground {
+        right: 100px;
     }
 
 }
@@ -1046,10 +1078,6 @@ h3.ui-accordion-header:first-child {
         margin-top: 4px;
     }
 
-    #logo {
-        max-width: 720px;
-    }
-
     div.scroll {
         margin-right: 0;
         right: -70px;
@@ -1068,13 +1096,36 @@ h3.ui-accordion-header:first-child {
         margin: 0 auto;
     }
 
-    footer div.centre div {
-        margin-right: 55px;
-        max-width: fit-content;
+    img#bottom-graphics1 {
+        display: none;
+    }
+
+    img#bottom-graphics2 {
+        display: block;
     }
 
     h4 {
         font-size: 25px;
+    }
+
+    footer h4 {
+        margin-bottom: 10px;
+    }
+
+    .fields .invulveld {
+        width: 620px;
+    }
+
+    .imgbackground {
+        right: 50px;
+    }
+
+    .input {
+        width: 450px;
+    }
+
+    .container {
+        width: 700px;
     }
 
 }
@@ -1162,10 +1213,6 @@ h3.ui-accordion-header:first-child {
         margin-left: 50px;
     }
 
-    #logo {
-        max-width: 600px;
-    }
-
     #wie {
         margin-bottom: 100px;
     }
@@ -1178,6 +1225,10 @@ h3.ui-accordion-header:first-child {
 
     h2{
         text-align: center;
+    }
+
+    .container h2 {
+        text-align: left;
     }
 
     #team h2 {
@@ -1216,14 +1267,55 @@ h3.ui-accordion-header:first-child {
         max-width: 400px;
     }
 
-    footer {
-        height: max-content;
+    .container {
+        position: relative;
+        right: 0;
+        margin: 0 auto;
+        width: 560px;
+        height: 611px;
     }
+
+    .fields .invulveld {
+        width: 469px;
+    }
+
+    .input {
+        width: 300px;
+    }
+ 
+    a#regibtn {
+        margin-right: 20px;
+        margin-top: 98px;
+    }
+
+    .imgbackground {
+        left: -390px;
+    }
+
+    .container h2 {
+        font-size: 50px;
+    }
+   
 }
 
 @media all and (max-width: 768px) {
     nav {
         display: none;
+        position: absolute;
+        top: 19px;
+        float: none;
+        width: 100%;
+        height: fit-content;
+        background-color: #EDEDED;
+        border-radius: 0 0 33px 33px;
+    }
+
+    nav li, nav li:first-child {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 auto;
+        height: 72px;
     }
 
     header {
@@ -1231,7 +1323,7 @@ h3.ui-accordion-header:first-child {
         border-radius: 0;
         height: 75px;
     }
-
+    
     .hamburgermenu {
         display: inline-block;
     }
@@ -1242,5 +1334,148 @@ h3.ui-accordion-header:first-child {
         margin: 19px auto 0;
         display: block;
         float: none;
+    }
+
+    div.scroll {
+        top: 350px;
+    }
+
+    div.scroll p {
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    div.scroll img {
+        width: 21px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 35px;
+    }
+
+    #wie p, #interesse p {
+        font-size: 25px;
+    }
+
+    img#mid-graphics {
+        bottom: 0;
+    }
+
+    #interesse {
+        bottom: 100px;
+    }
+
+    #team {
+        max-width: 400px;
+    }
+
+    .people {
+        max-width: 250px;
+    }
+
+    .teamtext {
+        padding-left: 20px;
+    }
+
+    img#bottom-graphics2 {
+        height: 1600px;
+        object-fit: contain;
+        object-position: 10% 100%;
+    }
+
+    footer div.help {
+        clear: both;
+    }
+
+    footer div.centre div {
+        margin-right: 45px;
+    }
+}
+
+@media all and (max-width:600px) {
+
+    img#mid-graphics {
+        bottom: -20px;
+    }
+
+    #interesse {
+        bottom: 20px;
+    }
+
+    #team {
+        margin-top: 40px;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .hamburgermenu {
+        width: 57px;
+        height: 46px;
+        background-size: cover;
+        top: 12px;
+    }
+
+    div.scroll {
+        top: 300px;
+        right: -30px;
+    }
+
+    div.scroll p span {
+        display: none;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    #wie, #interesse p {
+        margin-bottom: 65px;
+    }
+
+    #workshops .displays, #interesse .displays {
+        margin-bottom: 100px;
+    }
+
+    #workshops {
+        max-width: calc(1082px - ((96px * 2) - (30px * 2)));
+    }
+
+    .middle {
+        margin: 0 30px;
+    }
+
+    #wie p, #interesse p {
+        font-size: 20px;
+        max-width: 300px;
+    }
+
+    #interesse {
+        bottom: 0px;
+    }
+
+    #team {
+        width: 350px;
+        padding-bottom: 100px;
+    }
+
+    #contact p {
+        text-align: center;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    footer div.centre div {
+        float: none;
+        margin: 0px auto 35px;
+    }
+
+    footer div h4 {
+        margin-bottom: 0px;
     }
 }
