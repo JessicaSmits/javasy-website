@@ -22,4 +22,3 @@ $( "#accordion" ).accordion({
     collapsible: true,
     animate: 300,
 });
-

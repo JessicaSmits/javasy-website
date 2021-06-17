@@ -533,7 +533,7 @@ footer div.centre div.contact {
 .container {
     position: absolute;
     top: 130px;
-    right: 63px;
+    left: 40vw;
     background-color: #ffffff;
     width: 700px;
     height: 550px;
@@ -624,6 +624,8 @@ header#workshop {
 
 #promo {
     margin-bottom: 132px;
+    width: 100%;
+    
 }
 
 /* informatie */
@@ -725,7 +727,11 @@ header#workshop {
 
 h3.ui-accordion-header {
     position: relative;
-    height: 54px;
+    border-top: 1px solid #C6C6C6;
+}
+
+h3.ui-accordion-header:first-child {
+    border: none;
 }
 
 .ui-accordion-header-icon {
@@ -747,16 +753,24 @@ h3.ui-accordion-header {
     background-image: url('../assets/accordion-icon.png');
 }
 
-#accordion div {
-    height: max-content; 
-}
-
 #accordion div p {
     max-width: 350px;
     font: normal normal normal 24px/29px Neuzeit Grotesk;
     letter-spacing: 1.2px;
     margin-left: 55px;
     float: left;
+}
+
+#accordion div p {
+    margin-top: 50px;
+}
+
+#accordion div.vormen p {
+    margin-top: 25px;
+}
+
+#accordion div.kleuren p {
+    margin-top: 20px;
 }
 
 #accordion div.video {
@@ -778,10 +792,10 @@ h3.ui-accordion-header {
 
 #bestanden {
     width: 720px;
-    height: 1108px;
+    height: max-content;
     margin: 0 507px 0 139px;
     background-color: #EDEDED;
-    padding-bottom: 160px;
+    padding-bottom: 48px;
 }
 
 .files {
@@ -857,7 +871,7 @@ h3.ui-accordion-header {
 .beoordeling {
     position: relative;
     float: left;
-    top: -100px;
+    top: -120px;
     width: 365px;
     height: 225px;
     margin: 0 34px 0 0;
@@ -900,7 +914,10 @@ h3.ui-accordion-header {
 
 #reviews a p{
     float: right;
-    margin-top: -46px;
+    margin-top: -66px;
     color: #3C3C3B;
 
 }
+
+
+
