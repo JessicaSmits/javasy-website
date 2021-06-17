@@ -1,15 +1,17 @@
 
-let workshop = $("#workshop");
+let workshop = $("header#workshop");
 
 $(window).scroll(function() {
     let scroll = $(window).scrollTop();
 
     if ( scroll > 500) {
-        workshop.animate({"opacity":"1"});
+        workshop.animate({opacity:1});
+        console.log("vincent");
     } else if ( scroll < 500) {
-        workshop.animate({"opacity":"0"});
+        workshop.animate({opacity:0});
+        console.log("Hallo");
     }
-    
+    console.log(scroll);
 });
 
 var icons = {

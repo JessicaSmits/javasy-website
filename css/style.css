@@ -152,6 +152,11 @@ button {
     letter-spacing: 1.1px;
     text-transform: uppercase;
     cursor: pointer;
+    transition: transform 0.5s;
+}
+
+button:hover {
+    transform: scale(105%);
 }
 
 
@@ -281,6 +286,14 @@ div.overlay {
 }
 .robot p.beschrijving {
     bottom: 50px;
+}
+
+.robot, .hackathon, .light, .left, .darkorange, .right {
+    transition: transform 0.5s;
+}
+
+.robot:hover, .hackathon:hover, .light:hover, .left:hover, .darkorange:hover, .right:hover {
+    transform: scale(105%);
 }
 
 /* hackathon */
@@ -625,7 +638,7 @@ header#workshop {
 #promo {
     margin-bottom: 132px;
     width: 100%;
-    
+
 }
 
 /* informatie */
