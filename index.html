@@ -14,6 +14,7 @@
 <body>
     <div class="gradient"></div>
     <header>
+        <div class="hamburgermenu"></div>
         <a href="index.html"><img src="assets/logo.svg" alt="logo Javasy" id="logoheader"></a>
         <nav>
             <li><a href="#workshops">workshops</a></li>
@@ -33,16 +34,17 @@
         </div>
         <div class="clear"></div>
         <!-- inhoud -->
-        <section class="wie">
+        <section id="wie">
             <h2>Wie?</h2>
             <p><a href="#team">Wij</a> zijn een jong startersbedrijf, gespecialiseerd in 21e eeuw coding workshops voor kids t/m 12 jaar. Geef je klas een workshop om nooit meer te vergeten.</p>
         </section>
 
+        <!-- workshops -->
         <section id="workshops">
             <h2>Workshops</h2>
             <div class="displays">
                 <a href="workshop.html">
-                    <div class="box lightorange robot">
+                    <div class="box outer robot">
                         <h4 class="nameworkshop ">R0-B0t</h4>
                         <div class="box grey">
                             <p class="attention">Korting 15%</p>
@@ -59,7 +61,7 @@
                    </div>
                 </a>
                 <a href="workshop.html">
-                    <div class="box darkorange hackathon">
+                    <div class="box middle hackathon">
                         <h4 class="nameworkshop ">Hackathon</h4>
                         <div class="box grey">
                             <p class="attention dark">New!</p>
@@ -76,7 +78,7 @@
                     </div>
                 </a>
                 <a href="workshop.html">
-                    <div class="box lightorange light">
+                    <div class="box outer light">
                         <h4 class="nameworkshop ">Play with light</h4>
                         <div class="box grey">
                             <div class="stats">
@@ -89,32 +91,35 @@
                             <p class="beschrijving">In deze serie ga je een digitaal huisdier, games en wearables uitvinden en maken met de Microbit.</p>
                         </div>
                     </div>
-                    <div class="clear"></div>
+                    
                 </a>
+                <div class="clear"></div>
             </div>
-            
-            <a href="/workshop.html"><button>Naar workshops</button></a>
-            
+                        
+            <a href="workshop.html"><button>Naar workshops</button></a>
         </section>
-        <img class="middle graphics" src="assets/middle graphics.svg" alt="">
+        
+        <img id="mid-graphics" class="graphics" src="assets/middle graphics.svg" alt="">
+        
+        <!-- interesse -->
         <section id="interesse">
             <h2>Interesse?</h2>
             <p>Meld je nu aan voor een gratis proefles of neem direct een van onze abonnementen voor onbeperkte toegang tot onze workshops.</p>
             <div class="displays">
-                <div class="box lightorange left">
+                <div class="box outer left">
                     <div class="box grey">
                         <h3>Gratis Proefles</h3>
                         <p>Maak een account aan en geniet van een gratis proefles</p>
                     </div>
                 </div>
-                <div class="box darkorange">
+                <div class="box middle">
                     <p id="focus">Meest gekozen</p>
                     <div class="box grey">
                         <h3>€9,99<span>p/m</span></h3>
                         <p>Neem een abonnement van 12 maanden!</p>
                     </div>
                 </div>
-                <div class="box lightorange right">
+                <div class="box outer right">
                     <div class="box grey">
                         <h3>€14,99<span>p/m</span></h3>
                         <p>Neem een abonnement van 3 maanden!</p>
@@ -124,6 +129,7 @@
             </div>
         </section>
 
+        <!-- team -->
         <section id="team">
             <h2>Ons team</h2>
             <div class="people">
@@ -166,12 +172,13 @@
                 <p>Vragen?</p>
                 <a href="#"><button>mail ons</button></a>
             </div>
+            <div class="clear"></div>
         </section>
-
-        <img src="assets/bottom graphics.svg" alt="" class="bottom graphics">
-
+        <div class="clear"></div>
+        <img src="assets/bottom graphics.svg" alt="" id="bottom-graphics" class="graphics">
     </main>
 
+    <!-- footer -->
     <footer id="bottom">
         <div class="centre">
             <div class="javasy">
@@ -189,7 +196,6 @@
             <div class="contact">
                 <h4>contact</h4>
                 <p>Locatie:<br>Brusselseweg 150, <br>6217 HB Maastricht <br>Mail:<br> contact@javasy.com<br>Phone:<br>06-64839271</p>
-                
             </div>
             <div class="clear"></div>
         </div>

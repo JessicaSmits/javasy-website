@@ -4,11 +4,11 @@ let workshop = $("header#workshop");
 $(window).scroll(function() {
     let scroll = $(window).scrollTop();
 
-    if ( scroll > 500) {
-        workshop.animate({opacity:1});
+    if ( scroll > 600) {
+        workshop.css({opacity:1});
         console.log("vincent");
-    } else if ( scroll < 500) {
-        workshop.animate({opacity:0});
+    } else if ( scroll < 600) {
+        workshop.css({opacity:0});
         console.log("Hallo");
     }
     console.log(scroll);

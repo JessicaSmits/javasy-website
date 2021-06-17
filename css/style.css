@@ -14,6 +14,7 @@ main {
 }
 
 .clear {
+    float: none !important;
     clear: both;
 }
 
@@ -24,7 +25,7 @@ header {
     position: fixed;
     top: 0px;
     background-color: #EDEDED;
-    width: 1240px;
+    max-width: 1240px;
     height: 55px;
     z-index: 2;
     right: 0;
@@ -35,10 +36,20 @@ header {
     z-index: 2;
 }
 
+.hamburgermenu {
+    background-image: url("/assets/burgermenu.svg");
+    width: 85px;
+    height: 69px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
 #logoheader {
     height: 38px;
     width: auto;
-    margin: 0 0 16px 41px;
+    margin-left: 41px;
     float: left;
 }
 
@@ -80,14 +91,15 @@ nav li a:hover {
 
 #logo {
     display: block;
-    width: 822px;
+    max-width: 822px;
+    height: auto;
     margin: 0 auto 17px;
 }
 
 div.scroll {
     position: absolute;
     top: 500px;
-    right: 0;
+    right: -20px;
     margin-right: 5px;
     transform: matrix(0, 1, -1, 0, 0, 0);
     height: 25px;
@@ -111,6 +123,11 @@ div.scroll p{
 }
 
 /* algemeen */
+h1 {
+    font: normal normal 500 70px/138px "interstate";
+    margin-bottom: 30px;
+}
+
 h2 {
     font: normal normal 500 60px/72px "interstate";
     margin-bottom: 23px;
@@ -133,7 +150,7 @@ h5 {
     margin-top: 40px;
 }
 
-p {
+#wie p {
     font-size: 36px;
 }
 
@@ -162,29 +179,38 @@ button:hover {
 
 /* inhoud index */
 /* wie */
-.wie {
+#wie {
     position: relative;
     max-width: 654px;
     margin: 0 auto 175px;
     text-align: center;
     color: #3C3C3B;
 }
-.wie a {
+
+#wie a {
     text-decoration: underline;
     color: #3c3c3b;
 }
-.wie a:hover {
+
+#wie a:hover {
     color: #FF911F;
 }
 
 
 /* workshops */
 #workshops {
-    width: 1082px;
     margin: 0 auto;
+    max-width: 1082px;
 }
+
 #workshops a {
     color: #3c3c3b;
+}
+
+#workshops .displays {
+    padding-bottom: 110px;
+    padding-right: 37px;
+    max-width: 100%;
 }
 
 .box {
@@ -193,32 +219,16 @@ button:hover {
     cursor: pointer;
 }
 
-.lightorange {
+.outer {
     position: relative;
-    background-color: #F9B233;
     width: 260px;
     height: 319px;
-}
-
-.lightorange:first-child {
-    margin-left: 37px;
+    top: 32px;
 }
 
 .nameworkshop {
     margin-top: 14px;
     text-align: center;
-}
-
-.darkorange {
-    position: relative;
-    background-color: #FF911F;
-    width: 296px;
-    height: 350px;
-    margin: 0 96px;
-}
-
-.darkorange .grey {
-    margin: 0 18px;
 }
 
 .grey {
@@ -239,6 +249,11 @@ button:hover {
 
 p.attention.dark {
     color: #FF911F;
+}
+
+.stats {
+    max-width: max-content;
+    margin: 0 auto;
 }
 
 .stats p {
@@ -266,17 +281,24 @@ div.overlay {
 #workshops button {
     display: block;
     margin: 0 auto;
-    margin-top: 160px;
+    margin-top: 23px;
     z-index: 2;
 }
 
 /* robot */
+.outer.robot {
+    margin-left: 37px;
+    background-color: #FF7E7E;
+}
+
 .robot .grey, #interesse .left .grey {
     right: 37px;
 }
-.robot .stats p:first-child {
-    margin-left: 5px;
+
+.robot .stats p:first-child, .hackathon .stats p:first-child, .light .stats p:first-child {
+    margin-left: 0;
 }
+
 .robot div.overlay {
     background-image: 
         linear-gradient(#ededed00,#EDEDED40, #EDEDEDe6, #EDEDED),
@@ -288,18 +310,27 @@ div.overlay {
     bottom: 50px;
 }
 
-.robot, .hackathon, .light, .left, .darkorange, .right {
+.robot, .hackathon, .light, .left, .middle, .right {
     transition: transform 0.5s;
 }
 
-.robot:hover, .hackathon:hover, .light:hover, .left:hover, .darkorange:hover, .right:hover {
+.robot:hover, .hackathon:hover, .light:hover, .left:hover, .middle:hover, .right:hover {
     transform: scale(105%);
 }
 
 /* hackathon */
-.hackathon .stats p:first-child {
-    margin-left: 31px;
+.middle {
+    position: relative;
+    background-color: #F9B233;
+    width: 296px;
+    height: 350px;
+    margin: 0 96px;
 }
+
+.middle .grey {
+    margin: 0 18px;
+}
+
 .hackathon div.overlay {
     background-image: 
         linear-gradient(#ededed00,#EDEDED40, #EDEDEDe6, #EDEDED),
@@ -316,11 +347,13 @@ div.overlay {
     left: 37px;
 }
 .light .stats {
-    margin: 53px 0 24px;
+    margin: 53px auto 0;
 }
-.light .stats p:first-child {
-    margin-left: 18px;
+
+.light {
+    background-color: #7E7EFF;
 }
+
 .light div.overlay {
     background-image: 
     linear-gradient(#ededed00,#EDEDED40, #EDEDEDe6, #EDEDED),
@@ -334,11 +367,11 @@ div.overlay {
 }
 
 
-/* interesse? */
+/* interesse */
 #interesse {
     position: relative;
-    bottom: 185px;
-    width: 1088px;
+    bottom: 250px;
+    max-width: 1088px;
     margin: 0 auto ; 
 }
 
@@ -346,6 +379,7 @@ div.overlay {
     width: 600px;
     text-align: center;
     margin: 23px auto 100px;
+    font-size: 36px;
 }
 
 #interesse h2{
@@ -359,10 +393,12 @@ div.overlay {
     text-align: center;
 }
 
-
-
 #interesse .displays {
     margin-bottom: 32px;
+    padding-bottom: 32px;
+    padding-right: 37px;
+    margin: 0 auto;
+    max-width: max-content;
 }
 
 #interesse .grey {
@@ -370,9 +406,8 @@ div.overlay {
     top: 32px;
 }
 
-#interesse .lightorange {
-    position: relative;
-    top: 32px;
+#interesse .outer.left {
+    margin-left: 37px;
 }
 
 #interesse .displays h3 span {
@@ -398,7 +433,11 @@ div.overlay {
 }
 
 /* first/left */
-#interesse .lightorange.left p {
+#interesse .left {
+    background-color: #7EFF7E;
+}
+
+#interesse .outer.left p {
     margin-top: 30px;
 }
 
@@ -407,17 +446,22 @@ div.overlay {
 }
 
 /* middle */
-#interesse .darkorange .grey{
+#interesse .middle .grey{
     position: relative;
     top: 0;
 }
 
-#interesse .darkorange h3 {
+#interesse .middle h3 {
     color: #FF911F;
 }
 
-#interesse .displays .darkorange p,  #interesse .displays .lightorange.right p {
+#interesse .displays .middle p,  #interesse .displays .outer.right p {
     margin-top: 57px;
+}
+
+/* right */
+#interesse .right {
+    background-color: #FFF87E;
 }
 
 
@@ -425,13 +469,14 @@ div.overlay {
 #team {
     width: 720px;
     height: 1108px;
-    margin: 0 507px 0 139px;
+    float: left;
+    margin-left: 139px;
     background-color: #EDEDED;
 }
 
 .people {
     position: relative;
-    width: 536px;
+    max-width: 536px;
     height: 160px;
     background-color: #ffffff;
     margin: 20px auto;
@@ -469,7 +514,8 @@ div.overlay {
 }
 
 #contact {
-    margin-left: 390px;
+    float: right;
+    margin-right: 50px;
 }
 
 #contact p {
@@ -484,13 +530,17 @@ div.overlay {
     height: auto;
 }
 
-img.middle.graphics {
+img#mid-graphics {
     position: relative;
     bottom: 58px;
     z-index: -1;
 }
 
-img.bottom.graphics {
+img#bottom-graphics {
+    width: auto;
+    max-width: none;
+    height: auto;
+    overflow: hidden;
     position: absolute;
     bottom: 0;
     z-index: -1;
@@ -519,7 +569,7 @@ footer h4 {
 }
 
 footer div.centre {
-    max-width: 988px;
+    max-width: fit-content;
     height: auto;
     margin: 0 auto;
 }
@@ -633,24 +683,36 @@ footer div.centre div.contact {
 /* workshop hackathon */
 header#workshop {
     opacity: 0;
+    transition: all 0.5s;
 }
 
 #promo {
     margin-bottom: 132px;
     width: 100%;
-
 }
 
 /* informatie */
+#about h1 {
+    text-align: center;
+}
+
+#about p {
+    font-size: 30px;
+    width: 634px;
+    text-align: center;
+    margin: 0 auto 200px;
+}
+
 #about .box{
     width: 501px;
     height: 334px;
     border-radius: 30px;
+    cursor: default;
 }
 
 .bigbox {
     width: fit-content;
-    margin: 0 auto 278px;
+    margin: 0 auto 200px;
 }
 
 .bigbox img {
@@ -670,11 +732,12 @@ header#workshop {
     margin: 30px 0 0 45px ;
 }
 
-.inhoud p {
+#about .inhoud p {
     font: normal normal normal 24px/29px "neuzeit-grotesk";
     letter-spacing: 1.2px;
     width: 340px;
-    margin-top: 25px;
+    margin: 25px 0 0 0;
+    text-align: left;
 }
 
 .bigbox.first img, .bigbox.third img {
@@ -699,7 +762,7 @@ header#workshop {
 }
 
 /* overgang */
-.overgang .middle.graphics {
+.overgang #mid-graphics {
     bottom: 0;
     top: 71px;
 }
@@ -861,7 +924,7 @@ h3.ui-accordion-header:first-child {
 
 /* review */
 #reviews {
-    width: 1166px;
+    max-width: 1166px;
     height: 380px;
     margin: 0 auto;
 }
@@ -869,7 +932,7 @@ h3.ui-accordion-header:first-child {
 #reviewbackground {
     background-color: #EDEDED;
     border-radius: 30px;
-    width: 1095px;
+    max-width: 1095px;
     height: 185px;
     margin: 0 auto;
 }
@@ -932,5 +995,252 @@ h3.ui-accordion-header:first-child {
 
 }
 
+/* media queries */
+@media screen and (max-width: 1185px) {
+    
+}
 
+@media screen and (max-width:1120px) {
+    div.scroll {
+        margin-right: 0;
+        right: -40px;
+    }
 
+    nav li {
+        margin-left: 20px;
+        width: 140px;
+    }
+
+    nav li:first-child {
+        margin-left: 95px;
+    }
+
+    footer div.centre div {
+        margin-right: 75px;
+    }
+
+}
+
+@media all and (max-width:1120px) and (min-width:981px) {
+    #workshops {
+        max-width: calc(1082px - ((96px * 2) - (30px * 2)));
+    }
+
+    .middle {
+        margin: 0 30px;
+    }
+}
+
+@media all and (max-width:980px) {
+    nav li {
+        margin-left: 15px;
+        width: 120px;
+    }
+
+    nav li:first-child {
+        margin-left: 75px;
+    }
+
+    #logoheader {
+        height: 30px;
+        margin-top: 4px;
+    }
+
+    #logo {
+        max-width: 720px;
+    }
+
+    div.scroll {
+        margin-right: 0;
+        right: -70px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    #interesse p {
+        width: 500px;
+    }
+
+    #team, #bestanden {
+        float: none;
+        margin: 0 auto;
+    }
+
+    footer div.centre div {
+        margin-right: 55px;
+        max-width: fit-content;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+}
+
+@media all and (max-width: 980px) and (min-width: 801px) {
+    #wie {
+        margin-bottom: 100px;
+    }
+
+    #interesse {
+        bottom: 200px;
+    }
+
+    .box {
+        width: 230px;
+    }
+
+    .box.middle {
+        width: 250px;
+        margin: 0 15px;
+    }
+
+    .middle .grey {
+        margin: 0 10px;
+    }
+
+    #workshops {
+        max-width: calc(460px + 280px + 30px);
+    }
+
+    .stats p {
+        margin-left: 25px;
+    }
+
+    #workshops .box.grey p.attention {
+        margin-bottom: 18px;
+    }
+
+    .light div.overlay {
+        margin-top: 40px;
+    }
+
+    p.beschrijving {
+        left: 10;
+        width: 210px;
+    }
+
+    .outer.robot, #interesse .outer.left {
+        margin-left: 15px;
+    }
+
+    .robot p.beschrijving {
+        bottom: 20px;
+    }
+
+    .robot .grey, #interesse .left .grey {
+        right: 15px;
+    }
+
+    .light p.beschrijving{
+        bottom: 0;
+    }
+
+    .light .grey, #interesse .right .grey {
+        left: 15px;
+    }
+
+    #workshops .displays, #interesse .displays {
+        padding-right: 15px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    #logoheader {
+        margin-left: 30px;
+    }
+
+    nav li {
+        width: 100px;
+        margin-left: 20px;
+        font-weight: 500;
+    }
+
+    nav li:first-child {
+        margin-left: 50px;
+    }
+
+    #logo {
+        max-width: 600px;
+    }
+
+    #wie {
+        margin-bottom: 100px;
+    }
+
+    #wie p {
+        margin: 0 auto;
+        font-size: 30px;
+        max-width: 450px;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    #team h2 {
+        left: 0;
+        margin-bottom: 0;
+    }
+
+    #interesse {
+        bottom: 180px;
+    }
+
+    #interesse p {
+        width: 400px;
+        font-size: 30px;
+    }
+
+    img#mid-graphics {
+        bottom: 40px;
+    }
+
+    #workshops .displays, #interesse .displays {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: max-content;
+        overflow-x: auto;
+        width: auto;
+        padding: 0 77px 110px 40px;
+    }
+
+    #team {
+        max-width: 600px;
+    }
+
+    .people {
+        max-width: 400px;
+    }
+
+    footer {
+        height: max-content;
+    }
+}
+
+@media all and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    header {
+        padding-top: 0;
+        border-radius: 0;
+        height: 75px;
+    }
+
+    .hamburgermenu {
+        display: inline-block;
+    }
+
+    #logoheader {
+        height: 44px;
+        text-align: center;
+        margin: 19px auto 0;
+        display: block;
+        float: none;
+    }
+}
