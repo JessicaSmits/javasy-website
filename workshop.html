@@ -14,8 +14,8 @@
         <div class="hamburgermenu"></div>
         <a href="index.html"><img src="assets/logo.svg" alt="logo Javasy" id="logoheader"></a>
         <nav>
-            <li><a href="#workshops">workshops</a></li>
-            <li><a href="#team">over ons</a></li>
+            <li><a href="index.html#workshops">workshops</a></li>
+            <li><a href="index.html#team">over ons</a></li>
             <li><a href="#bottom">contact</a></li>
             <li><a href="login.html">inloggen</a></li>
         </nav>
@@ -27,7 +27,7 @@
         <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/564070481?autoplay=1;muted=1badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Promo Hackathon"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>
     
-    <main>
+    <main id="workshop-page">
         <section id="about">
             <h1>Hackathon</h1>
             <p>Help de geheim agent de hackers van de dag te verslaan en leer te programmeren.</p>
@@ -113,10 +113,6 @@
                 </div>
             </div>
         </section>
-
-        <div id="bestanden-graphics">
-            <img class="graphics" src="assets/bottom-graphics.svg" alt="een leuk achtergrond-patroon">
-        </div>
     
         <section id="bestanden">
             <h2>Bestanden</h2>
@@ -157,35 +153,40 @@
             </div>
         </section>
 
+
+        <img src="assets/bottom-graphics.svg" alt=""class="bottom graphics bottom-graphics1">
+        <img src="assets/bottom-graphics2.svg" alt="" class="graphics bottom bottom-graphics2">
+     
+
         <section id="reviews"> 
-            <div id="reviewbackground">
-                <h2>Reviews</h2>
-            </div>
+            <h2>Reviews</h2>
+            <div id="reviewbackground"></div>
+            <div class="centre">
+                <div class="beoordeling top">
+                        <p class="reviewtitle">"Top!"</p>
+                        <img class="stars" src="assets/stars.svg">
+                        <img class="reviewpicture" src="assets/rev1.png"> 
+                        <p class="description">Leuke en goed verzorgde workshop. Uitleg was top en de leerlingen waren heel erg enthousiast!</p>
+                        <p class="reviewperson">Roel Dullens, docent groep 7</p>  
+                </div>
 
-            <div class="beoordeling top">
-                    <p class="reviewtitle">"Top!"</p>
+                <div class="beoordeling leuk">
+                    <p class="reviewtitle">"Leuk!"</p>
                     <img class="stars" src="assets/stars.svg">
-                    <img class="reviewpicture" src="assets/rev1.png"> 
-                    <p class="description">Leuke en goed verzorgde workshop. Uitleg was top en de leerlingen waren heel erg enthousiast!</p>
-                    <p class="reviewperson">Roel Dullens, docent groep 7</p>  
-            </div>
+                    <img class="reviewpicture" src="assets/rev2.png">
+                    <p class="description">De kinderen wilden blijven doorgaan terwijl de schooldag voorbij was. Zo leuk vonden ze het!</p>
+                    <p class="reviewperson">Dirk de Hond, docent groep 7</p>
+                </div>
 
-            <div class="beoordeling leuk">
-                <p class="reviewtitle">"Leuk!"</p>
-                <img class="stars" src="assets/stars.svg">
-                <img class="reviewpicture" src="assets/rev2.png">
-                <p class="description">De kinderen wilden blijven doorgaan terwijl de schooldag voorbij was. Zo leuk vonden ze het!</p>
-                <p class="reviewperson">Dirk de Hond, docent groep 7</p>
+                <div class="beoordeling cool">
+                    <p class="reviewtitle">"Cool!"</p>
+                    <img class="stars" src="assets/stars.svg">
+                    <img class="reviewpicture" src="assets/rev3.png">        
+                    <p class="description">Het thema met de geheimagent maakt dit een coole manier voor de jeugd om te coderen.</p>
+                    <p class="reviewperson">Els de Vries, docent groep 7</p>
+                </div>
+                <div class="clear"></div>
             </div>
-
-            <div class="beoordeling cool">
-                <p class="reviewtitle">"Cool!"</p>
-                <img class="stars" src="assets/stars.svg">        
-                <img class="reviewpicture" src="assets/rev3.png">        
-                <p class="description">Het thema met de geheimagent maakt dit een coole manier voor de jeugd om te coderen.</p>
-                <p class="reviewperson">Els de Vries, docent groep 7</p>
-            </div>
-
             <a href="#"><p>Meer reviews ></p></a>
             <div class="clear"></div>
         </section>

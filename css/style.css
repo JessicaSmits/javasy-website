@@ -13,6 +13,10 @@ main {
     margin: 0 auto;
 }
 
+text {
+    font-family: "interstate", sans-serif;
+}
+
 .clear {
     float: none !important;
     clear: both;
@@ -106,7 +110,6 @@ nav li a:hover {
 }
 
 #logo {
-    font-family: "interstate";
     display: block;
     max-width: 825px;
     height: auto;
@@ -564,9 +567,11 @@ img.bottom {
     z-index: -1;
 }
 
-img#bottom-graphics2 {
+img.bottom-graphics2 {
     display: none;
 }
+
+
 
 /* footer */
 
@@ -614,8 +619,9 @@ footer div.centre div.contact {
 .imgbackground {
     position: absolute;
     width: auto;
+    left: -300px;
     height: 100vh;
-    right: 280px;
+    
 }
 
 .container {
@@ -717,13 +723,17 @@ header#workshop {
 }
 
 /* informatie */
+#about {
+    padding-bottom: 71px;
+}
+
 #about h1 {
     text-align: center;
 }
 
 #about p {
     font-size: 30px;
-    width: 634px;
+    max-width: 634px;
     text-align: center;
     margin: 0 auto 200px;
 }
@@ -778,7 +788,11 @@ header#workshop {
     margin-bottom: 0;
 }
 
-.omschrijving, .vaardigheden {
+.omschrijving {
+    background-color: #FF7E7E;
+} 
+
+.vaardigheden {
     background-color: #F9B233;
 }
 
@@ -801,10 +815,14 @@ header#workshop {
     color: #3C3C3B;
 }
 
+.workshopinfo p {
+    font-size: 36px;
+}
+
 /* tutorials */
 .tutorials {
-    margin: 0 auto 173px;
-    width: 1020px;
+    margin: 100px auto 173px;
+    max-width: 1020px;
     background-color: #EDEDED;
     border-radius: 10px;
 }
@@ -819,6 +837,7 @@ header#workshop {
 #accordion {
     position: relative;
     bottom: 36px;
+    width: fit-content;
 }
 
 #accordion h3 {
@@ -859,6 +878,7 @@ h3.ui-accordion-header:first-child {
     font: normal normal normal 24px/29px "neuzeit-grotesk";
     letter-spacing: 1.2px;
     margin-left: 55px;
+    margin-bottom: 20px;
     float: left;
 }
 
@@ -882,13 +902,8 @@ h3.ui-accordion-header:first-child {
 }
 
 /* bestanden */
-#bestanden-graphics {
-    position: relative;
-}
-
-#bestanden-graphics img{
-    position: absolute;
-    z-index: -1;
+#workshop-page img.bottom-graphics1, #workshop-page img.bottom-graphics2 {
+    bottom: 15%;
 }
 
 #bestanden {
@@ -896,7 +911,7 @@ h3.ui-accordion-header:first-child {
     height: max-content;
     margin: 0 507px 0 139px;
     background-color: #EDEDED;
-    padding-bottom: 48px;
+    padding-bottom: 150px;
 }
 
 .files {
@@ -949,53 +964,72 @@ h3.ui-accordion-header:first-child {
 
 /* review */
 #reviews {
+    position: relative;
     max-width: 1166px;
     height: 380px;
-    margin: 0 auto;
+    margin: 170px auto 0;
+    padding-bottom: 25px;
 }
 
 #reviewbackground {
+    position: absolute;
     background-color: #EDEDED;
     border-radius: 30px;
-    max-width: 1095px;
+    width: 100%;
+    top: 42px;
     height: 185px;
     margin: 0 auto;
+    z-index: -1;
 }
+
 #reviews h2 {
     margin-top: 200px;
+    margin-bottom: 0;
     position: relative;
-    top: -43px;
     left: 37px;
+}
+
+#reviews div.centre {
+    margin: 0 auto;
+    width: fit-content;
 }
 
 /* beoordeling blokjes */
 .beoordeling {
-    position: relative;
     float: left;
-    top: -120px;
+    position: relative;
     width: 365px;
-    height: 225px;
-    margin: 0 34px 0 0;
+    height: calc(225px - 26px);
+    padding-top: 26px;
+    margin: 27px 34px 0 0;
     background-color: #F9B233;
     border-radius: 30px;
 }
 
+.beoordeling.top {
+    background-color: #7EFF7E;
+}
+
 .beoordeling.cool {
+    background-color: #FFF87E;
     margin-right: 0;
 }
 
 .beoordeling p {
     margin-left: 37px;
+    line-height: 19px;
 }
 
 .reviewtitle {
+    font-size: 30px;
     font-weight: bold;
-    margin: 26px 0px 16px 37px;
+    margin: 0 0 16px 37px;
 }
 
 .description {
     font-size: 16px;
-    height: 100px;
+    height: fit-content;
+    margin-bottom: 10px;
     width: 165px;
 }
 .reviewperson {
@@ -1008,21 +1042,44 @@ h3.ui-accordion-header:first-child {
     margin: 10px 22px;
 }
 .stars {
-    float: right;
+    position: absolute;
     width: 185px;
-    margin: -52px 16px;
+    top: 14px;
+    right: 12px;
 }
 
 #reviews a p{
+    font-size: 24px;
     float: right;
-    margin-top: -66px;
+    margin-top: 35px;
     color: #3C3C3B;
 
 }
 
+/* -------------------------------------- */
 /* media queries */
-@media screen and (max-width: 1185px) {
-    
+@media screen and (max-width: 1180px) {
+    #reviews {
+        padding: 0 10px;
+    }
+
+    #reviewbackground {
+        width: 98%;
+    }
+
+    .beoordeling {
+        width: 310px;
+        padding-bottom: 5px;
+    }
+
+    .beoordeling p {
+        margin-left: 25px;
+        width: fit-content;
+    }
+
+    .stars {
+        width: 170px;
+    }
 }
 
 @media screen and (max-width:1120px) {
@@ -1048,10 +1105,54 @@ h3.ui-accordion-header:first-child {
         margin-right: 75px;
     }
 
+    /* login en registreer */
     .imgbackground {
         right: 100px;
     }
 
+    /* workshop */
+    #about .box {
+        max-width: 450px;
+    }
+
+    .bigbox.first, .bigbox.third {
+        padding-left: 50px;
+    }
+
+    .bigbox.second {
+        padding-right: 50px;
+    }
+
+    .bigbox.first img, .bigbox.third img {
+        right: 50px;
+    }
+
+    .bigbox.second img {
+        left: 50px
+    }
+
+    .bigbox img {
+        object-fit: cover;
+    }
+
+    .workshopinfo {
+        bottom: 100px;
+    }
+
+    #accordion div.video {
+        margin-left: 55px;
+        margin-top: 10px;
+    }
+
+    .beoordeling {
+        margin-right: 20px;
+        width: 290px;
+        height: fit-content;
+    }
+
+    .stars {
+        width: 160px;
+    }
 }
 
 @media all and (max-width:1120px) and (min-width:981px) {
@@ -1088,6 +1189,10 @@ h3.ui-accordion-header:first-child {
         font-size: 50px;
     }
 
+    h3 {
+        font-size: 40px;
+    }
+
     #interesse p {
         width: 500px;
     }
@@ -1097,11 +1202,11 @@ h3.ui-accordion-header:first-child {
         margin: 0 auto;
     }
 
-    img#bottom-graphics1 {
+    img.bottom-graphics1 {
         display: none;
     }
 
-    img#bottom-graphics2 {
+    img.bottom-graphics2 {
         display: block;
     }
 
@@ -1113,6 +1218,7 @@ h3.ui-accordion-header:first-child {
         margin-bottom: 10px;
     }
 
+    /* login en registreer */
     .fields .invulveld {
         width: 600px;
     }
@@ -1127,6 +1233,81 @@ h3.ui-accordion-header:first-child {
 
     .container {
         width: 700px;
+    }
+
+    /* workshop */
+    #about .inhoud p {
+        margin-top: 15px;
+        width: 290px;
+        height: fit-content;
+    }
+
+    #about .box {
+        max-width: 375px;
+        height: 400px;
+    }
+
+    .bigbox.first, .bigbox.third {
+        padding-left: 30px;
+    }
+
+    .bigbox.second {
+        padding-right: 30px;
+    }
+
+    .bigbox.first img, .bigbox.third img {
+        right: 30px;
+    }
+
+    .bigbox.second img {
+        left: 30px
+    }
+
+    .workshopinfo {
+        bottom: 50px;
+    }
+
+    .workshopinfo p {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    #reviews {
+        height: fit-content;
+    }
+
+    .beoordeling {
+        width: 250px;
+        height: fit-content;
+        padding-bottom: 10px;
+    }
+
+    div.centre .description {
+        padding: 0 5px;
+        margin: 0 auto 20px;
+        width: 80%;
+    }
+
+    div.centre .reviewperson {
+        margin: 0 auto;
+    }
+
+    .stars {
+        width: 120px;
+        top: 25px;
+        right: 5px;
+    }
+
+    .reviewpicture {
+        float: none;
+        display: block;
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+
+    div.centre .reviewtitle {
+        font-size: 25px;
+        margin-left: 15px;
     }
 
 }
@@ -1199,6 +1380,26 @@ h3.ui-accordion-header:first-child {
     }
 }
 
+@media all and (max-width:837px) {
+    #accordion {
+        margin: 0 auto;
+    }
+
+    #accordion div p, #accordion div.video {
+        margin: 10px auto 50px;
+        text-align: center;
+        float: none;
+    }
+
+    .beoordeling {
+        width: 200px;
+    }
+
+    .stars {
+        width: 90px;
+    }
+}
+
 @media all and (max-width: 800px) {
     #logoheader {
         margin-left: 30px;
@@ -1232,7 +1433,7 @@ h3.ui-accordion-header:first-child {
         text-align: left;
     }
 
-    #team h2 {
+    #team h2, #bestanden h2, #reviews h2 {
         left: 0;
         margin-bottom: 0;
     }
@@ -1260,14 +1461,15 @@ h3.ui-accordion-header:first-child {
         padding: 0 77px 110px 40px;
     }
 
-    #team {
+    #team, #bestanden {
         max-width: 600px;
     }
 
-    .people {
+    .people, .files {
         max-width: 400px;
     }
 
+    /* login en registreer */
     .container {
         position: relative;
         right: 0;
@@ -1300,7 +1502,72 @@ h3.ui-accordion-header:first-child {
     .container h2 {
         font-size: 50px;
     }
-   
+
+    /* workshop */
+    .downloadsvg {
+        margin: 60px 10px;
+    }
+
+    .files {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .downloadbox {
+        padding-left: 20px;
+    }
+
+    .downloadbox p {
+        width: 200px;
+    }
+    
+   /* workshop */
+    #about {
+        padding: 0;
+        height: fit-content;
+    }
+
+    #about p {
+        max-width: 550px;
+        margin-bottom: 150px;
+    }
+
+    #about .box {
+        margin: 0 auto;
+        float: none;
+    }
+
+    .omschrijving, .thema, .vaardigheden {
+        padding-top: 5px;
+    }
+
+    .bigbox.first, .bigbox.second, .bigbox.third {
+        padding: 0;
+        margin-bottom: 75px;
+    }
+
+    .bigbox.third {
+        margin-bottom: 0;
+    }
+
+    .bigbox.first img, .bigbox.second img, .bigbox.third img {
+        left: 0;
+        right: 0;
+    }
+
+    .bigbox.second img {
+        top: 0;
+    }
+
+    .bigbox.first img, .bigbox.third img, #about .box.thema {
+        position: relative;
+        top: -50px;
+    }
+
+    .overgang #mid-graphics {
+        top: 0;
+    }
+
 }
 
 @media all and (max-width: 768px) {
@@ -1327,7 +1594,8 @@ h3.ui-accordion-header:first-child {
         padding-top: 0;
         border-radius: 0;
         height: 75px;
-        max-width: 100%;
+        width: 100%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
     
     .hamburgermenu {
@@ -1355,6 +1623,10 @@ h3.ui-accordion-header:first-child {
         width: 21px;
     }
 
+    h1 {
+        font-size: 60px;
+    }
+
     h2 {
         font-size: 40px;
     }
@@ -1363,7 +1635,7 @@ h3.ui-accordion-header:first-child {
         font-size: 35px;
     }
 
-    #wie p, #interesse p {
+    #wie p, #interesse p, #about p, .workshopinfo p {
         font-size: 25px;
     }
 
@@ -1375,20 +1647,25 @@ h3.ui-accordion-header:first-child {
         bottom: 100px;
     }
 
-    #team {
+    #team, #bestanden {
         max-width: 400px;
     }
 
-    .people {
+    .people, .files {
         max-width: 250px;
     }
 
-    .teamtext {
+    .teamtext, .downloadbox {
         padding-left: 20px;
     }
 
-    img#bottom-graphics2 {
-        height: 1600px;
+    .downloadbox {
+        width: fit-content;
+    }
+
+    img.bottom-graphics2 {
+        height: 1000px;
+        bottom: 50px;
         object-fit: contain;
         object-position: 10% 100%;
     }
@@ -1400,6 +1677,32 @@ h3.ui-accordion-header:first-child {
     footer div.centre div {
         margin-right: 45px;
     }
+
+    /* workshop */
+
+    .downloadsvg {
+        margin: 0 auto;
+        width: 50px;
+    }
+
+    .beoordeling {
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    .beoordeling p {
+        padding: 0 15px;
+        width: fit-content;
+    }
+
+    .reviewperson {
+        margin: 0;
+    }
+
+    .stars {
+        display: none;
+    }
+
 }
 
 @media all and (max-width:600px) {
@@ -1412,10 +1715,11 @@ h3.ui-accordion-header:first-child {
         bottom: 20px;
     }
 
-    #team {
+    #team, #bestanden {
         margin-top: 40px;
     }
 
+    /* login en registreer */
     .container {
         width: 400px;
     }
@@ -1424,13 +1728,62 @@ h3.ui-accordion-header:first-child {
         width: 300px;
     }
 
-    .input {
-        width: 100px;
-    }
-
     .container a, .container #registreren {
         margin-right: 0;
         float: left;
+    }
+
+    /* workshop */
+    #accordion div.video {
+        width: 400px;
+        height: auto;
+    }
+
+    #accordion div p {
+        font-size: 20px;
+        width: fit-content;
+    }
+
+    .ui-accordion-header-icon {
+        width: 20px;
+        height: 20px;
+        margin: 0 20px;
+    }
+
+    #reviews, .beoordeling, #reviewbackground {
+        width: 367px;
+        margin: 0 auto;
+    }
+
+    .beoordeling {
+        float: none;
+        margin-bottom: 33px;
+        height: 190px;
+    }
+
+    div.centre .reviewtitle, div.centre .reviewperson,div.centre .description {
+        margin-left: 37px;
+        padding: 0;
+    }
+
+    div.centre .description {
+        width: 165px;
+    }
+
+    .stars {
+        width: 182px;
+        display: block;
+        top: 14px;
+    }
+
+    .reviewpicture {
+        float: right;
+        width: 116px;
+        margin: 10px 22px;
+    }
+
+    #workshop-page img.bottom-graphics2 {
+        bottom: 20%;
     }
 }
 
@@ -1440,6 +1793,11 @@ h3.ui-accordion-header:first-child {
         height: 46px;
         background-size: cover;
         top: 12px;
+    }
+
+    #logoheader {
+        height: 30px;
+        margin-top: 24px;
     }
 
     div.scroll {
@@ -1480,7 +1838,7 @@ h3.ui-accordion-header:first-child {
         bottom: 0px;
     }
 
-    #team {
+    #team, #bestanden {
         width: 350px;
         padding-bottom: 100px;
     }
@@ -1500,5 +1858,18 @@ h3.ui-accordion-header:first-child {
 
     footer div h4 {
         margin-bottom: 0px;
+    }
+
+    /* workshop */
+    #about .box {
+        width: 300px;
+    }
+
+    #about .inhoud p {
+        width: 270px;
+    }
+
+    #about div.inhoud {
+        margin: 10px;
     }
 }
