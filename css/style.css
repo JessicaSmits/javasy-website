@@ -1455,7 +1455,7 @@ h3.ui-accordion-header:first-child {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        height: max-content;
+        height: 390px;
         overflow-x: auto;
         width: auto;
         padding: 0 77px 110px 40px;
@@ -1639,6 +1639,18 @@ h3.ui-accordion-header:first-child {
         font-size: 25px;
     }
 
+    .box {
+        width: 250px;
+    }
+
+    .middle {
+        margin: 0 40px;
+    }
+
+    .middle .grey {
+        margin: 0;
+    }
+
     img#mid-graphics {
         bottom: 0;
     }
@@ -1655,7 +1667,21 @@ h3.ui-accordion-header:first-child {
         max-width: 250px;
     }
 
-    .teamtext, .downloadbox {
+    .heads {
+        display: block;
+        float: none;
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    .teamtext {
+        text-align: center;
+        margin: 0 auto;
+        float: none;
+        padding: 0;
+    }
+
+    .downloadbox {
         padding-left: 20px;
     }
 
@@ -1706,7 +1732,6 @@ h3.ui-accordion-header:first-child {
 }
 
 @media all and (max-width:600px) {
-
     img#mid-graphics {
         bottom: -20px;
     }
@@ -1718,6 +1743,8 @@ h3.ui-accordion-header:first-child {
     #team, #bestanden {
         margin-top: 40px;
     }
+
+    
 
     /* login en registreer */
     .container {
@@ -1823,10 +1850,6 @@ h3.ui-accordion-header:first-child {
 
     #workshops {
         max-width: calc(1082px - ((96px * 2) - (30px * 2)));
-    }
-
-    .middle {
-        margin: 0 30px;
     }
 
     #wie p, #interesse p {

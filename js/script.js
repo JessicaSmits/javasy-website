@@ -57,7 +57,7 @@ $(document).ready(function(){
         
     });
 
-    if(window.matchMedia("(max-width: 767px)").matches){
+    if((window.matchMedia("(max-width: 767px)").matches) || window.screen("max-width: 767px")){
         $(".hamburgermenu").css({
             "display":"inline-block"
         })
