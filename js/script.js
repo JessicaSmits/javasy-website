@@ -30,9 +30,7 @@ $(document).ready(function(){
 
             $("nav").css({"display":"block"});
             $("header").css({"z-index":4});
-            $(".darkoverlay").css({"display":"block"});
             $("nav").slideDown(500);
-            $(".darkoverlay").slideDown(500);
             $(this).css ({
                 backgroundImage:'url("assets/burgermenu2.svg")',
                 backgroundRepeat: "no-repeat"
@@ -43,10 +41,8 @@ $(document).ready(function(){
             console.log('else');
 
             $("nav").slideUp(500);
-            $(".darkoverlay").slideUp(500);
             $("header").css({"z-index":2});
             $("nav").css({"display":"none"});
-            $(".darkoverlay").css({"display":"none"});
             $(this).css ({
                 backgroundImage:' url("assets/burgermenu.svg")',
                 backgroundRepeat: "no-repeat"
