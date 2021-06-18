@@ -586,6 +586,7 @@ footer h4 {
 
 footer div.centre {
     width: fit-content;
+    width: -moz-fit-content;
     height: auto;
     margin: 0 auto;
 }
@@ -735,6 +736,7 @@ header#workshop {
 
 .bigbox {
     width: fit-content;
+    width: -moz-fit-content;
     margin: 0 auto 200px;
 }
 
@@ -758,8 +760,8 @@ header#workshop {
 #about .inhoud p {
     font: normal normal normal 24px/29px "neuzeit-grotesk";
     letter-spacing: 1.2px;
-    width: 340px;
-    margin: 25px 0 0 0;
+    width: 360px;
+    margin: 15px 0 0 0;
     text-align: left;
 }
 
@@ -826,6 +828,8 @@ header#workshop {
     position: relative;
     bottom: 36px;
     width: fit-content;
+    width: -moz-fit-content;
+
 }
 
 #accordion h3 {
@@ -980,6 +984,7 @@ h3.ui-accordion-header:first-child {
 #reviews div.centre {
     margin: 0 auto;
     width: fit-content;
+    width: -moz-fit-content;
 }
 
 /* beoordeling blokjes */
@@ -1017,6 +1022,7 @@ h3.ui-accordion-header:first-child {
 .description {
     font-size: 16px;
     height: fit-content;
+    height: -moz-fit-content;
     margin-bottom: 10px;
     width: 165px;
 }
@@ -1063,6 +1069,7 @@ h3.ui-accordion-header:first-child {
     .beoordeling p {
         margin-left: 25px;
         width: fit-content;
+        width: -moz-fit-content;
     }
 
     .stars {
@@ -1136,6 +1143,7 @@ h3.ui-accordion-header:first-child {
         margin-right: 20px;
         width: 290px;
         height: fit-content;
+        height: -moz-fit-content;
     }
 
     .stars {
@@ -1228,6 +1236,7 @@ h3.ui-accordion-header:first-child {
         margin-top: 15px;
         width: 290px;
         height: fit-content;
+        height: -moz-fit-content;
     }
 
     #about .box {
@@ -1262,11 +1271,13 @@ h3.ui-accordion-header:first-child {
 
     #reviews {
         height: fit-content;
+        height: -moz-fit-content;
     }
 
     .beoordeling {
         width: 250px;
         height: fit-content;
+        height: -moz-fit-content;
         padding-bottom: 10px;
     }
 
@@ -1498,7 +1509,9 @@ h3.ui-accordion-header:first-child {
 
     .files {
         width: fit-content;
+        width: -moz-fit-content;
         height: fit-content;
+        height: -moz-fit-content;
     }
 
     .downloadbox {
@@ -1513,6 +1526,7 @@ h3.ui-accordion-header:first-child {
     #about {
         padding: 0;
         height: fit-content;
+        height: -moz-fit-content;
     }
 
     #about p {
@@ -1566,6 +1580,7 @@ h3.ui-accordion-header:first-child {
         float: none;
         width: 100%;
         height: fit-content;
+        height: -moz-fit-content;
         background-color: #EDEDED;
         border-radius: 0 0 33px 33px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -1676,6 +1691,7 @@ h3.ui-accordion-header:first-child {
 
     .downloadbox {
         width: fit-content;
+        width: -moz-fit-content;
     }
 
     img.bottom-graphics2 {
@@ -1708,6 +1724,7 @@ h3.ui-accordion-header:first-child {
     .beoordeling p {
         padding: 0 15px;
         width: fit-content;
+        width: -moz-fit-content;
     }
 
     .reviewperson {
@@ -1759,6 +1776,7 @@ h3.ui-accordion-header:first-child {
     #accordion div p {
         font-size: 20px;
         width: fit-content;
+        width: -moz-fit-content;
     }
 
     .ui-accordion-header-icon {
