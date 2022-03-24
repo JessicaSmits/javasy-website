@@ -539,13 +539,13 @@ div.overlay {
     height: auto;
 }
 
-img#mid-graphics {
+#mid-graphics {
     position: relative;
     bottom: 58px;
     z-index: -1;
 }
 
-img.bottom {
+.bottom {
     width: 100%;
     max-width: none;
     height: auto;
@@ -555,7 +555,7 @@ img.bottom {
     z-index: -1;
 }
 
-img.bottom-graphics2 {
+.bottom-graphics2 {
     display: none;
 }
 
